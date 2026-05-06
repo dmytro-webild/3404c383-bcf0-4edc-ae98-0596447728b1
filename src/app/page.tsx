@@ -67,6 +67,7 @@ export default function LandingPage() {
         { icon: Award, label: "Years of Excellence", value: "8+" }
       ]}
       metricsAnimation="slide-up"
+      useInvertedBackground={false}
     />
   </div>
 
@@ -81,6 +82,7 @@ export default function LandingPage() {
       ]}
       imageSrc="http://img.b2bpic.net/free-photo/man-having-his-hair-fixed-with-comb-hairdryer_23-2148256901.jpg?_wi=2"
       mediaAnimation="slide-up"
+      useInvertedBackground={false}
     />
   </div>
 
@@ -96,6 +98,7 @@ export default function LandingPage() {
       ]}
       title="Exclusive Products"
       description="Bring the salon home with our hand-picked selection of luxury beauty essentials."
+      useInvertedBackground={false}
     />
   </div>
 
@@ -110,6 +113,7 @@ export default function LandingPage() {
       title="Our Pricing"
       description="Transparent pricing for world-class salon care."
       textboxLayout="default"
+      useInvertedBackground={false}
     />
   </div>
 
@@ -121,6 +125,7 @@ export default function LandingPage() {
       avatars={[]}
       ratingAnimation="slide-up"
       avatarsAnimation="slide-up"
+      useInvertedBackground={false}
     />
   </div>
 
@@ -135,6 +140,7 @@ export default function LandingPage() {
       description="We're here to make your visit seamless and relaxing."
       faqsAnimation="slide-up"
       textboxLayout="default"
+      useInvertedBackground={false}
     />
   </div>
 
@@ -144,6 +150,8 @@ export default function LandingPage() {
       description="Book an appointment or reach out for inquiries about our services."
       tag="Connect With Us"
       buttonText="Book Now"
+      useInvertedBackground={false}
+      background={{ variant: "plain" }}
     />
   </div>
 
