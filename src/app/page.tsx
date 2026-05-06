@@ -3,18 +3,25 @@
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import ReactLenis from "lenis/react";
 import AboutMetric from '@/components/sections/about/AboutMetric';
-import ContactCenter from '@/components/sections/contact/ContactCenter';
+import ContactSplitForm from '@/components/sections/contact/ContactSplitForm';
 import FaqDouble from '@/components/sections/faq/FaqDouble';
 import FeatureCardTwentyOne from '@/components/sections/feature/FeatureCardTwentyOne';
-import FooterLogoReveal from '@/components/sections/footer/FooterLogoReveal';
+import FooterCard from '@/components/sections/footer/FooterCard';
 import HeroSplitTestimonial from '@/components/sections/hero/HeroSplitTestimonial';
 import NavbarStyleApple from '@/components/navbar/NavbarStyleApple/NavbarStyleApple';
 import PricingCardTwo from '@/components/sections/pricing/PricingCardTwo';
 import ProductCardThree from '@/components/sections/product/ProductCardThree';
 import TestimonialCardFifteen from '@/components/sections/testimonial/TestimonialCardFifteen';
-import { Award, Leaf, ShieldCheck, Star, Users } from "lucide-react";
+import { Award, Star, Users, Instagram, Facebook, Phone } from "lucide-react";
 
 export default function LandingPage() {
+  const whatsappNumber = "919876543210";
+  const whatsappMessage = "Hi! I would like to book an appointment at Namastey Salon.";
+
+  const handleWhatsAppBooking = () => {
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+  };
+
   return (
     <ThemeProvider
         defaultButtonVariant="text-shift"
@@ -53,6 +60,7 @@ export default function LandingPage() {
         { name: "Sarah J.", handle: "@sarahj", testimonial: "Excellent service and very hygienic!", rating: 5 },
         { name: "Sameer K.", handle: "@sameerk", testimonial: "Very soft spoken and professional.", rating: 5 }
       ]}
+      buttons={[{ text: "Book via WhatsApp", onClick: handleWhatsAppBooking }]}
       imageSrc="http://img.b2bpic.net/free-photo/close-up-shot-bathing-brush-with-essential-oils-candles-spa-concept_127675-2567.jpg?_wi=2"
       mediaAnimation="slide-up"
     />
@@ -106,9 +114,9 @@ export default function LandingPage() {
       <PricingCardTwo
       animationType="slide-up"
       plans={[
-        { id: "basic", badge: "Essential", price: "₹899", subtitle: "Daily Grooming", buttons: [{ text: "Book Session" }], features: ["Hair Trim", "Basic Conditioning"] },
-        { id: "pro", badge: "Popular", price: "₹1,999", subtitle: "Salon Refresh", buttons: [{ text: "Book Session" }], features: ["Hair Styling", "Manicure", "Head Massage"] },
-        { id: "prem", badge: "Elite", price: "₹3,499", subtitle: "Total Renewal", buttons: [{ text: "Book Session" }], features: ["Color Treatment", "Spa Facial", "Premium Pedicure"] }
+        { id: "basic", badge: "Essential", price: "₹899", subtitle: "Daily Grooming", buttons: [{ text: "Book Session", onClick: handleWhatsAppBooking }], features: ["Hair Trim", "Basic Conditioning"] },
+        { id: "pro", badge: "Popular", price: "₹1,999", subtitle: "Salon Refresh", buttons: [{ text: "Book Session", onClick: handleWhatsAppBooking }], features: ["Hair Styling", "Manicure", "Head Massage"] },
+        { id: "prem", badge: "Elite", price: "₹3,499", subtitle: "Total Renewal", buttons: [{ text: "Book Session", onClick: handleWhatsAppBooking }], features: ["Color Treatment", "Spa Facial", "Premium Pedicure"] }
       ]}
       title="Our Pricing"
       description="Transparent pricing for world-class salon care."
@@ -145,21 +153,28 @@ export default function LandingPage() {
   </div>
 
   <div id="contact" data-section="contact">
-      <ContactCenter
-      title="Schedule Your Visit"
-      description="Book an appointment or reach out for inquiries about our services."
-      tag="Connect With Us"
-      buttonText="Book Now"
+      <ContactSplitForm
+      title="Get In Touch"
+      description="Contact us for queries or book your appointment via WhatsApp."
+      inputs={[
+        { name: "name", type: "text", placeholder: "Your Name", required: true },
+        { name: "email", type: "email", placeholder: "Your Email", required: true }
+      ]}
+      textarea={{ name: "message", placeholder: "Tell us about your needs" }}
+      buttonText="Submit"
       useInvertedBackground={false}
-      background={{ variant: "plain" }}
     />
   </div>
 
   <div id="footer" data-section="footer">
-      <FooterLogoReveal
+      <FooterCard
       logoText="Namastey Salon"
-      leftLink={{ text: "Privacy Policy", href: "/privacy" }}
-      rightLink={{ text: "Terms of Service", href: "/terms" }}
+      copyrightText="© 2025 Namastey Salon. All rights reserved."
+      socialLinks={[
+        { icon: Instagram, href: "#", ariaLabel: "Instagram" },
+        { icon: Facebook, href: "#", ariaLabel: "Facebook" },
+        { icon: Phone, href: `https://wa.me/${whatsappNumber}`, ariaLabel: "WhatsApp" }
+      ]}
     />
   </div>
       </ReactLenis>
