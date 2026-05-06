@@ -66,7 +66,7 @@ export default function LandingPage() {
           handle: "@sarahj",
           testimonial: "Excellent service and very hygienic!",
           rating: 5,
-          imageSrc: "http://img.b2bpic.net/free-photo/close-up-shot-bathing-brush-with-essential-oils-candles-spa-concept_127675-2567.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/close-up-shot-bathing-brush-with-essential-oils-candles-spa-concept_127675-2567.jpg?_wi=1",
           imageAlt: "luxury beauty salon interior",
         },
         {
@@ -74,7 +74,7 @@ export default function LandingPage() {
           handle: "@sameerk",
           testimonial: "Very soft spoken and professional.",
           rating: 5,
-          imageSrc: "http://img.b2bpic.net/free-photo/man-having-his-hair-fixed-with-comb-hairdryer_23-2148256901.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/man-having-his-hair-fixed-with-comb-hairdryer_23-2148256901.jpg?_wi=1",
           imageAlt: "luxury beauty salon interior",
         },
         {
@@ -98,11 +98,11 @@ export default function LandingPage() {
           handle: "@meerap",
           testimonial: "The staff here is truly caring and skilled.",
           rating: 5,
-          imageSrc: "http://img.b2bpic.net/free-photo/assortment-beauty-products-displayed-shelf_23-2150718003.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/assortment-beauty-products-displayed-shelf_23-2150718003.jpg?_wi=1",
           imageAlt: "luxury beauty salon interior",
         },
       ]}
-      imageSrc="http://img.b2bpic.net/free-photo/close-up-shot-bathing-brush-with-essential-oils-candles-spa-concept_127675-2567.jpg"
+      imageSrc="http://img.b2bpic.net/free-photo/close-up-shot-bathing-brush-with-essential-oils-candles-spa-concept_127675-2567.jpg?_wi=2"
       mediaAnimation="slide-up"
       avatars={[
         {
@@ -200,7 +200,7 @@ export default function LandingPage() {
           content: "Professional coloring by experienced stylists.",
         },
       ]}
-      imageSrc="http://img.b2bpic.net/free-photo/man-having-his-hair-fixed-with-comb-hairdryer_23-2148256901.jpg"
+      imageSrc="http://img.b2bpic.net/free-photo/man-having-his-hair-fixed-with-comb-hairdryer_23-2148256901.jpg?_wi=2"
       mediaAnimation="slide-up"
     />
   </div>
@@ -216,7 +216,7 @@ export default function LandingPage() {
           id: "p1",
           name: "Premium Shampoo",
           price: "₹1,200",
-          imageSrc: "http://img.b2bpic.net/free-photo/assortment-beauty-products-displayed-shelf_23-2150718003.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/assortment-beauty-products-displayed-shelf_23-2150718003.jpg?_wi=2",
         },
         {
           id: "p2",
